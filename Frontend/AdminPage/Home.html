@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Home.css">
+
+</head>
+
+<body>
+    <!-- sidebar -> home -> branch vise timetable
+    sidebar -> add branch -> not now
+    sidebar -> add place -> typevise : audi,lab,lecture
+    sidebar -> add Student -> branch,name,id,enrollment
+    sidebar -> add faculty -> name,id,branch,subject
+    sidebar -> add subject -> name,id,branch,faculty,place,perweekclass -->
+
+    <header class="navbar">
+        <div class="logo">TimeTablePro</div>
+        <nav>
+            <a class="btn-outline logout-btn">Logout</a>
+            <!-- <a href="Home.html" id="button" class="btn-c">Login</a> -->
+        </nav>
+    </header>
+    <main>
+        <div class="sidebar">
+            <a class="selected">Home</a>
+            <a>Branch</a>
+            <a>Student</a>
+            <a>Faculty</a>
+            <a>Place</a>
+            <a>Subject</a>
+            <a>AddBranch</a>
+        </div>
+
+        <div class="content">
+            <div class="tab Home">
+                <div class="time-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>7:00 to 8:00</td>
+                                <td>.Net</td>
+                                <td>WD</td>
+                                <td>Maths</td>
+                                <td>DOS</td>
+                                <td>Compiler design</td>
+                            </tr>
+                            <tr>
+                                <td>8:00 to 9:00</td>
+                                <td>.Net</td>
+                                <td>WD</td>
+                                <td>Maths</td>
+                                <td>DOS</td>
+                                <td>Compiler design</td>
+                            </tr>
+                            <tr>
+                                <td>9:00 to 10:00</td>
+                                <td>.Net</td>
+                                <td>WD</td>
+                                <td>Maths</td>
+                                <td>DOS</td>
+                                <td>Compiler design</td>
+                            </tr>
+                            <tr>
+                                <td>10:00 to 10:30</td>
+                                <td colspan="5">break</td>
+                            </tr>
+                            <tr>
+                                <td>10:30 to 11:30</td>
+                                <td>.Net</td>
+                                <td>WD</td>
+                                <td>Maths</td>
+                                <td>DOS</td>
+                                <td>Compiler design</td>
+                            </tr>
+                            <tr>
+                                <td>11:30 to 12:30</td>
+                                <td>.Net</td>
+                                <td>WD</td>
+                                <td>Maths</td>
+                                <td>DOS</td>
+                                <td>Compiler design</td>
+                            </tr>
+                            <tr>
+                                <td>12:30 to 1:30</td>
+                                <td>.Net</td>
+                                <td>WD</td>
+                                <td>Maths</td>
+                                <td>DOS</td>
+                                <td>Compiler design</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab Branch remove">
+                <div class="display-Branch"></div>
+            </div>
+            <div class="tab Student remove">
+                <div class="AddStudent">
+                    <form action="">
+                        <div>
+                            <label>Name</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label>Enrollment</label>
+                            <input type="number" min="1">
+                        </div>
+                        <div>
+                            <label>Branch</label>
+                            <select></select>
+                        </div>
+                        <button type="submit" class="btn-primary" id="addStudent">Add Student</button>
+                    </form>
+                </div>
+                <div class="display-Student"></div>
+            </div>
+            <div class="tab Faculty remove">
+                <div class="display-Faculty"></div>
+            </div>
+            <div class="tab Place remove">
+                <div class="AddPlace">
+                    <form action="">
+                        <div>
+                            <label>Name</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label>Type</label>
+                            <input type="text">
+                        </div>
+                        <button type="submit" class="btn-primary" id="addPlace">Add Place</button>
+                    </form>
+                </div>
+                <div class="display-Place"></div>
+            </div>
+            <div class="tab Subject remove">
+                <div class="display-Subject"></div>
+            </div>
+            <div class="tab AddBranch remove">
+                <div class="display-AddBranch">
+
+                    <form id="branchForm">
+
+                        <div class="primary-text">Branch</div>
+                        <div class="labelInput">
+                            <label>Branch Name</label>
+                            <input type="text" id="branch_name">
+                        </div>
+
+                        <div class="subject_faculty">
+                            <div class="subject_form">
+                                <div class="primary-text">Subjects (1 per slot)</div>
+
+                                <div class="labelInput">
+                                    <label>Subject Name</label>
+                                    <input type="text" id="subject_name">
+                                </div>
+
+                                <div class="labelInput">
+                                    <label>Subject Place</label>
+                                    <input type="text" id="subject_place">
+                                </div>
+
+                                <button type="button" class="btn-secondary" id="addSubject">Add Subject</button>
+
+                                <table class="display-table">
+                                    <tbody id="subjectTableBody">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Subject Name</th>
+                                            <th>Place</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="faculty_form">
+                                <div class="primary-text">Faculty</div>
+
+                                <div class="labelInput">
+                                    <label>Faculty Name</label>
+                                    <input type="text" id="faculty_name">
+                                </div>
+
+                                <div class="labelInput">
+                                    <label>Faculty Subject</label>
+                                    <select multiple id="faculty_subject"></select>
+                                    
+                                </div>
+
+                                <button type="button" class="btn-secondary" id="addFaculty">Add Faculty</button>
+
+                                <table class="display-table">
+                                    <tbody id="facultyTableBody">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Faculty Name</th>
+                                            <th>Subject</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="contact">
+        <p>© 2026 TimeTablePro. All rights reserved.</p>
+    </footer>
+
+
+    <script src="AddBatch.js" type="module"></script>
+    <script src="Structure.js" type="module"></script>
+    <script src="Data.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="Home.js" type="module"></script>
+    <script src="Logout.js" type="module"></script>
+</body>
+
+</html>

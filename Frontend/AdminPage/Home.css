@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+  
+body {
+    color: #1f2933;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 0vh 5vw;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.navbar nav{
+    height: 10vh;
+    align-items: center;
+    align-content: center;
+}
+
+.navbar nav a {
+    margin-right: 2vw;
+    text-decoration: none;
+    color: #1e3a8a;
+    font-weight: 600;
+    font-size: 1.2vw;
+}
+
+.navbar nav button {
+    font-size: 1.2vw;
+    border: 2px solid #1e3a8a;
+    background: transparent;
+    padding: 1.5vh 1.5vw;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#button{
+    font-size: 1.2vw;
+    border: 2px solid #1e3a8a;
+    background: transparent;
+    padding: 1.5vh 1.5vw;
+    border-radius: 6px;
+}
+
+.btn-outline{
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 2vw;
+    font-weight: 800;
+    color: #1e3a8a;
+    align-self: center;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: white;
+}
+
+/* main */
+main {
+    background-color: #eef2ff;
+    display: flex;
+    height: 83vh
+}
+
+/* sidebar */
+
+.sidebar{
+    background-color: #1e3a8a;
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    font-weight: 700;
+    padding: 20px 0px;
+    min-width: 220px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: white;
+    padding: 15px 30px;
+}
+
+.sidebar a:hover{
+    background-color: #4560aa;
+}
+
+.selected{
+    background-color: #4560aa;
+}
+
+.remove{
+    display: none;
+}
+
+
+/* content */
+.content{
+    flex-grow: 1;
+    overflow-y: scroll;
+    padding: 35px;
+}
+
+.tab{
+    background-color: white;
+    min-height: 72vh;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.primary-text{
+    color: #1e3a8a;
+    font-size: x-large;
+    font-weight: 600;
+    margin: 10px 0px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.time-table > table , .display-table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #1e3a8a;
+}
+
+.time-table > table > thead > tr > th {
+    background-color: #eef2ff;
+    border: 2px solid #1e3a8a;
+    padding: 8px;
+    text-align: center; /* Optional: Adjusts header text alignment */
+    word-wrap: break-word; /* Wraps text in header cells if it's too long */
+    white-space: normal; /* Allows text to wrap */
+}
+
+.time-table > table > tbody > tr > td{
+    border: 2px solid #1e3a8a;
+    padding: 8px;
+    height: 50px;
+    word-wrap: break-word; /* Wraps text in body cells if it's too long */
+    white-space: normal; /* Allows text to wrap */
+}
+
+.time-table > table > tbody > tr:hover{
+    background-color: #eef2ff;
+}
+
+.display-table > tbody > tr > td, .display-table > tbody > tr > th{
+    border: 2px solid #1e3a8a;
+    padding: 8px;
+    word-wrap: break-word; 
+    white-space: normal;
+}
+
+.display-table > tbody > tr > th{
+    background-color: #eef2ff;
+}
+
+.display-table > tbody > tr:hover{
+    background-color: #eef2ff;
+}
+
+
+.btn-primary {
+    background: #1e3a8a;
+    color: white;
+    padding: 2vh 2vw;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #1e3a8a;
+    color: #1e3a8a;
+    padding: 1.8vh 1.8vw;
+    border-radius: 8px;
+    cursor: pointer;
+}
+  
+/* for add branch form */
+
+
+
+.labelInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: large;
+}
+
+input, select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.subject_form,.faculty_form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    gap: 20px;
+    width: 47%;
+}
+
+button {
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.subject_faculty{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+ /* add student */
+.AddStudent {
+    width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: #eef2ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.AddStudent form div {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.AddStudent label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.AddStudent input,
+.AddStudent select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.AddStudent input:focus,
+.AddStudent select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+/* add place */
+.AddPlace {
+    width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: #eef2ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.AddPlace form div {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.AddPlace label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.AddPlace input,
+.AddPlace select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.AddPlace input:focus,
+.AddPlace select:focus {
+    border-color: #007bff;
+    outline: none;
+}
